@@ -1,11 +1,16 @@
-import { api } from '@/data/api'
-import { Product } from '@/data/types/product'
 import Image from 'next/image'
 import Link from 'next/link'
 
-async function getFeaturedProducts(): Promise<Product[]> {
-  const response = await api('/products/featured')
+import { api } from '@/data/api'
+import { Product } from '@/data/types/product'
 
+async function getFeaturedProducts(): Promise<Product[]> {
+  await new Promise((resolve) => setTimeout(resolve, 1000))
+  const response = await api('/products/featured', {
+    next: {
+      revalidate: 60 * 60, // 1 hour
+    },
+  })
   const products = await response.json()
 
   return products
