@@ -19,6 +19,7 @@
           "caseInsensitive": true
         }
       }
-    ]
+    ],
+    "@next/next/no-img-element": "off"
   }
 }
