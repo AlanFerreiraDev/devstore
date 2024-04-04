@@ -41,7 +41,7 @@ devDependencies:
     specifier: ^10.0.1
     version: 10.4.19(postcss@8.4.38)
   cypress:
-    specifier: ^13.7.2
+    specifier: ^13.4.0
     version: 13.7.2
   eslint:
     specifier: ^8
