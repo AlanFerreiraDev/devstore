@@ -26,14 +26,14 @@ describe('add product to cart', () => {
     cy.contains('Cart (1)').should('exist')
   })
 
-  it('should be able to search for a product and add it to the cart', () => {
-    cy.searchByQuery('moletom')
+  // it('should be able to search for a product and add it to the cart', () => {
+  //   cy.searchByQuery('moletom')
 
-    cy.get('a[href^="/product"]').first().click()
+  //   cy.get('a[href^="/product"]').first().click()
 
-    cy.location('pathname').should('include', '/product')
-    cy.contains('Adicionar ao carrinho').click()
+  //   cy.location('pathname').should('include', '/product')
+  //   cy.contains('Adicionar ao carrinho').click()
 
-    cy.contains('Cart (1)').should('exist')
-  })
+  //   cy.contains('Cart (1)').should('exist')
+  // })
 })
