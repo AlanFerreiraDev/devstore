@@ -6,7 +6,7 @@ import { api } from '@/data/api'
 import { Product } from '@/data/types/product'
 
 async function getFeaturedProducts(): Promise<Product[]> {
-  await new Promise((resolve) => setTimeout(resolve, 1000))
+  await new Promise((resolve) => setTimeout(resolve, 3000))
   const response = await api('/products/featured', {
     next: {
       revalidate: 60 * 60, // 1 hour
