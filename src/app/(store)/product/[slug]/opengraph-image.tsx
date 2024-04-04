@@ -1,4 +1,4 @@
-import { ImageResponse } from 'next/og'
+import { ImageResponse } from 'next/server'
 import colors from 'tailwindcss/colors'
 
 import { api } from '@/data/api'
